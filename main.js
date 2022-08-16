@@ -27,10 +27,14 @@ function getPlayerSelection() {
 function playRound(playerSelection, computerSelection) {
   if(playerSelection === computerSelection){
     return alert("It's a Tie!!")
-  } else if (playerSelection === 'rock' && computerSelection === 'scissors' || playerSelection === 'paper' && computerSelection === 'rock' || playerSelection === 'scissors' && computerSelection === 'paper') {
+  } else if (playerSelection === 'rock' && computerSelection === 'scissors' ||
+             playerSelection === 'paper' && computerSelection === 'rock' ||
+             playerSelection === 'scissors' && computerSelection === 'paper') {
     playerScore++
     return alert(`You Win! ${playerSelection} beats ${computerSelection}`)
-  } else if(playerSelection === 'rock' && computerSelection === 'paper' || playerSelection === 'paper' && computerSelection === 'scissors' || playerSelection === 'scissors' && computerSelection === 'rock') {
+  } else if(playerSelection === 'rock' && computerSelection === 'paper' ||
+            playerSelection === 'paper' && computerSelection === 'scissors' ||
+            playerSelection === 'scissors' && computerSelection === 'rock') {
     computerScore++
     return alert(`You Lose! ${computerSelection} beats ${playerSelection}`)
   }
