@@ -45,6 +45,34 @@
           return alert(`You Lose! ${computerSelection} beats ${playerSelection}`)
         }
       }
+
+      //runs the playRound function 5 times and returning an alert on the results of the winner
+      function game() {
+        for(i = 1; i <= 5; i++) {
+          let playerSelection = getPlayerSelection()
+          let computerSelection = getComputerSelection()
+          validAnswer = false
+
+          playRound(playerSelection, computerSelection)
+
+          if(playerScore === 3) {
+            return alert("Congratulation's!! You Won!!")
+          } else if(computerScore === 3) {
+            return alert('Sorry!! You lost!!')
+          }
+        }
+
+        if(playerScore === computerScore) {
+          return alert('Round Over. Game is tied!!')
+        } else if(playerScore > computerScore) {
+          return alert(`Congratulation's!! You Won ${playerScore} - ${computerScore}`)
+        } else if(playerScore < computerScore) {
+          return alert(`Sorry!! You lost ${computerScore} - ${playerScore}`)
+        }
+      }
+
+      game()
+
     </script>
   </body>
 </html>
