@@ -8,6 +8,8 @@
   </head>
   <body>
     <script>
+      let playerScore = 0
+      let computerScore = 0
 
       //get a randomized computer selection returning 1 of the 3 options
       function getComputerSelection() {
@@ -28,6 +30,19 @@
             validAnswer = true
             return response
           }
+        }
+      }
+
+      //compare both selections returning an alert with message about the results and increasing winners score by 1
+      function playRound(playerSelection, computerSelection) {
+        if(playerSelection === computerSelection){
+          return alert("It's a Tie!!")
+        } else if (playerSelection === 'rock' && computerSelection === 'scissors' || playerSelection === 'paper' && computerSelection === 'rock' || playerSelection === 'scissors' && computerSelection === 'paper') {
+          playerScore++
+          return alert(`You Win! ${playerSelection} beats ${computerSelection}`)
+        } else if(playerSelection === 'rock' && computerSelection === 'paper' || playerSelection === 'paper' && computerSelection === 'scissors' || playerSelection === 'scissors' && computerSelection === 'rock') {
+          computerScore++
+          return alert(`You Lose! ${computerSelection} beats ${playerSelection}`)
         }
       }
     </script>
