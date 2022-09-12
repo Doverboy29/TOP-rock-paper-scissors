@@ -1,0 +1,68 @@
+.header {
+  display: flex;
+  justify-content: center;
+  color: white;
+  margin-bottom: 50px;
+}
+
+#body {
+  background-color: black;
+  color: white;
+}
+
+#choices {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.round-selection, .weapon-selection {
+  max-width: 100px;
+  max-height: auto;
+  border: 2px;
+  border-style: solid;
+  border-color: white;
+  border-radius: 25px;
+  transition:all 1s;
+}
+
+.round-selection {
+  padding: 40px;
+  cursor: pointer;
+}
+
+.round-selection:hover, .weapon-selection:hover {
+  transform: scale(1.1);
+  transition:all 1s;
+  border-color: yellow;
+}
+
+.weapon-selection {
+  padding: 20px;
+}
+
+#rounds-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 600px;
+  max-height: auto;
+  border: 2px;
+  border-style: solid;
+  border-color: white;
+  padding: 40px;
+  border-radius: 25px;
+}
+
+#rounds {
+  max-width: 50px;
+  padding:  10px;
+  margin: 0 auto;
+  font-size: large;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+}
