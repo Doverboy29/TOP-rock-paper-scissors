@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors</title>
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body id="body">
+    <h1>Rock, Paper, Scissors</h1>
+    <div id="rounds-container">
+      <h1>Best out of?</h1>
+      <div id="choices">
+        <h2 id="3" class="round-selection">3</h2>
+        <h2 id="5" class="round-selection">5</h2>
+        <h2 id="7" class="round-selection">7</h2>
+      </div>
+    </div>
+    <div id="container" style="display: none">
+      <div class="header">
+        <h1>Choose your weapon:</h1>
+      </div>
+      <div id="choices">
+        <div id="choice">
+          <input type="image" id="Rock" class="weapon-selection" src="/images/rock2.png" alt="rock" />
+        </div>
+        <div id="choice">
+          <input type="image" id="Paper"  class="weapon-selection" src="/images/paper2.png" alt="paper" />
+        </div>
+        <div id="choice">
+          <input type="image" id="Scissors" class="weapon-selection" src="/images/scissors2.png" alt="scissors" />
+        </div>
+      </div>
+      <hr style="width: 50%">
+    </div>
+    <div id="score-container" style="display: none;">
+      <div class="players">
+        <h2>Player's Score</h2>
+        <h2>Computer's Score</h2>
+      </div>
+      <div class="scores">
+        <p id="player-score" class="tally">0</p>
+        <p id="computer-score" class="tally">0</p>
+      </div>
+      <h1 id="verdict"></h1>
+    </div>
+  </body>
+</html>
